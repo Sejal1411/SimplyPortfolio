@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { Container, Grid2, Typography, IconButton, List, ListItem, ListItemText } from "@mui/material";
 import StockTable from "./StockTable";
 import MetricsCard from "./MetricsCard";
@@ -25,7 +26,7 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [username, setUsername] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(true);
-
+  const navigate = useNavigate();
   // Fetch username from localStorage
   useEffect(() => {
     const storedUsername = localStorage.getItem("name");
@@ -101,8 +102,8 @@ const Dashboard = () => {
             <ListItem button>
               <ListItemText primary="Dashboard" />
             </ListItem>
-            <ListItem button>
-              <ListItemText primary="Portfolio" />
+            <ListItem button >
+              <ListItemText primary="Add Stock" onClick={() => navigate('/app/add-stock')}/>
             </ListItem>
             <ListItem button>
               <ListItemText primary="Settings" />
