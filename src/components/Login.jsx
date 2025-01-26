@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { auth, provider } from '../Firebase';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from "/side-img.jpg";
+import logo from "/img1.jpg";
 import logo2 from "/search.png";
 
 
@@ -59,16 +59,16 @@ const Login = () => {
   return (
        
   <div className='log-in'>
-    <div className='image-con'>
+    {/* <div className='image-con'>
       <img src={logo} alt="LOGO" />
-    </div>
+    </div> */}
 
-  <div className='log-in-box'>
+   <div className='log-in-box'>
     <p> User Login </p>
 
     <TextField 
      id="outlined-basic"
-     color="success" 
+     color="" 
      label='Email'
      onChange={(e) => setValues((prev) => ({ ...prev, email: e.target.value }))
      }
@@ -90,7 +90,7 @@ const Login = () => {
 
     <Button 
      className='button'
-     variant="contained" 
+    variant="outlined"
      fullWidth
      onClick={handleSubmit}
      disabled = {submitButtonDisabled}
@@ -100,11 +100,11 @@ const Login = () => {
     
     <p className='text'>Not Registered? Create an account{" "}
       <span>
-        <Link to="/app/signup">Signup</Link>
+        <Link to="/app/signup" className='text2'>Signup</Link>
       </span>
     </p>
 
-    <p style={{color: 'black', fontSize: '14px'}}>OR</p>
+    <p style={{color: 'white', fontSize: '14px'}}>OR</p>
 
     <Button 
      className='button1'

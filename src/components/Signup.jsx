@@ -1,5 +1,5 @@
 import {  Button, TextField } from '@mui/material'
-import logo from "/side-img.jpg";
+import logo from "/img1.jpg";
 import { useState } from 'react';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from '../Firebase';
@@ -52,13 +52,13 @@ const Signup = () => {
   return (
 
 <div className='sign-up'>
-    <div className='image-con'>
+    {/* <div className='image-con'>
       <img src={logo} alt="LOGO" />
-    </div>
+    </div> */}
 
     <div className='sign-up-box'>
      <p>Signup !</p>
-     <p className='text'>Please enter your details to create your account</p>
+     <p className='text'>Please enter the details to Create Your Account</p>
 
      <TextField 
      id="outlined-basic"
@@ -104,7 +104,7 @@ const Signup = () => {
     
      <Button 
      className='button'
-     variant="contained" 
+    variant="outlined"
      fullWidth
      onClick={handleSubmit}
      disabled = {submitButtonDisabled}
@@ -113,7 +113,7 @@ const Signup = () => {
      </Button>
      <p className='text'>Already have an account?{" "}
        <span>
-        <Link to="/app/login">Login</Link>
+        <Link to="/app/login" className='text2'>Login</Link>
        </span>
      </p>
   </div>
