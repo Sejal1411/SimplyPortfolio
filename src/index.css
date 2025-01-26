@@ -203,6 +203,16 @@ body {
     width: 30%;
     gap:15px;
   }
+
+  .side-nav{
+    width: "250px";
+    background-color: white;
+    padding: 40px 20px 10px 10px;
+    position: "fixed"; 
+    margin: 20px 0 30px 0;
+    height: "40%";
+   border-radius: 10px;
+  }
   
   /* .img{
   
