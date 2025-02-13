@@ -3,7 +3,7 @@ Simply Portfolio
 To start Frontend :-
 
 npm i
-mpn run dev
+npm run dev
 
 To start Backend :-
 
